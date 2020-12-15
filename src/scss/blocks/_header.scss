@@ -1,0 +1,22 @@
+.header {
+    padding: 19px 0;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+    }
+    &__country {
+        display: flex;
+    }
+    &-info {
+        margin-left: 11px;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 300;
+        color: #242424;
+        &__title {
+            font-size: 14px;
+            font-weight: 700;
+        }
+    }
+
+}

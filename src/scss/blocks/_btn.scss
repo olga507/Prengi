@@ -1,0 +1,108 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.button {
+    position: relative;
+}
+
+.button::before,
+.button::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -17px;
+    left: 50%;
+    z-index: 2;
+    transition: all 1s ease 0s;
+    margin: 0 0 0 -20px;
+}
+
+.button::before{
+    animation: rotate 20s infinite linear;
+    border: 3px solid rgb(110, 54, 17);
+}
+
+.button::after {
+    animation: rotate 12s infinite linear;
+    border: 3px solid rgba(134, 65, 18, 0.664);
+}
+
+.button__text {
+    color: #fff;
+    position: relative;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 44px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 1s ease 0s;
+    top: 0;
+    overflow: hidden;
+}
+.button__text::before,
+.button__text::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color:#00c2f0;
+    transition: all 1s;
+}
+.button__text::before {
+    left: 0;
+    z-index: 3;
+}
+.button__text::after {
+    right: 0;
+    z-index: 1;
+}
+.button__text span {
+    position: relative;
+    z-index: 3;
+}
+.button:hover:before,
+.button:hover:after{
+    left: 100%;
+    opacity: 0;
+}
+
+.button:hover .button__text{
+    transition: all 0.6s;
+    color:#08323d;
+    top: -10px;
+    box-shadow: 0 7px 10px #06495a;
+    z-index: 3;
+}
+
+.button:hover .button__text:before,
+.button:hover .button__text:after {
+    background-color:#fe8687;
+}
+
+.button:hover .button__text:before{
+    width: 100%;
+}
+
+.button:active .button__text {
+    top: -7px;
+    transition: all 0.3s;
+    box-shadow: 0 1px 0px#06495a;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

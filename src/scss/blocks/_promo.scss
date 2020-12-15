@@ -1,0 +1,118 @@
+.promo {
+    position: relative;
+    .swiper-container-promo {
+        width: 100%;
+        height: 700px;
+        .swiper-button-prev-promo::after,
+        .swiper-button-next-promo::after {
+            color:#00c2f0;
+            font-size: 40px;
+        }
+        .swiper-button-prev-promo, .swiper-button-next-promo {
+            top: 90%;
+            transition: .4s all;
+            &:hover {
+                filter: drop-shadow(3px 3px 3px rgba(0, 194, 240, .9));
+            }
+        }
+        .swiper-button-prev-promo {
+            left: 41%;
+        }
+        .swiper-button-next-promo {
+            right: 41%;
+        }
+        .swiper-pagination-bullet {
+            width: 20px;
+            height: 20px;
+            background-color:#00c2f0;
+        }
+        img {
+            width: 100%;
+            height: 700px;
+            object-fit: cover;
+        }
+        .swiper-img-promo_info {
+            position: relative;
+            .promo__logo {
+                position: absolute;
+                left: 12%;
+                top: 39px;
+                img {
+                    height: 100%;
+                }
+            }
+            .promo__title {
+                position: absolute;
+                left: 12%;
+                top: 237px;
+                font-size: 42px;
+                line-height: 48px;
+                font-weight: 900;
+                color: #ffffff;
+                width: 530px;
+            }
+            .promo__subtitle {
+                position: absolute;
+                left: 12%;
+                top: 353px;
+                font-weight: 300;
+                font-size: 24px;
+                color: #ffffff;
+                width: 426px;
+                span {
+                    font-weight: 400;
+                }
+            }
+            .promo__mobil {
+                position: absolute;
+                right: 12%;
+                top: 131px;
+                animation: mobil 2s ease-in-out;
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+    &__nav {
+        position: absolute;
+        top: 65px;
+        right: 12%;
+        width: 540px;
+        z-index: 20;
+    }
+    &-menu {
+        display: flex;
+        justify-content: space-between;
+        &__item {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        &__link {
+            color: #fff;
+            transition: .3s all;
+            &:hover {
+                color: pink;
+                background-color: #06495a81; 
+                box-shadow: 0 0 3px #06495a;
+                border-radius: 5px;
+            }
+        }
+    }
+    &__btn {
+        position: absolute;
+        left: 12%;
+        bottom: 195px;
+    }
+}
+
+
+@keyframes mobil {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

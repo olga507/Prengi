@@ -1,0 +1,41 @@
+.solutions {
+    padding-top: 79px;
+    padding-bottom: 60px;
+    background: url(../img/solutions_bgr.jpg) no-repeat;
+    background-position-x: 70%;
+    min-height: 780px;
+    &__title {
+        padding: 0 230px;
+        text-align: center;
+        font-size: 30px;
+        line-height: 35px;
+        font-weight: 900;
+        color: #ffffff;
+    }
+    &__monitor {
+        margin-top: 70px;
+    }
+}
+.swiper-container-solutions {
+    width: 695px;
+    .swiper-button-prev-solutions::after,
+    .swiper-button-next-solutions::after {
+        color: #06495a;
+        font-size: 50px;
+    }
+    .swiper-button-prev-solutions, .swiper-button-next-solutions {
+        transition: .4s all;
+        &:hover {
+            filter: drop-shadow(3px 3px 3px #06495a);
+        }
+        &:active {
+            filter: none;
+        }
+    }
+    .swiper-button-prev-solutions {
+        left: -15%;
+    }
+    .swiper-button-next-solutions {
+        right: -15%;
+    }
+}
